@@ -1,0 +1,55 @@
+/* ==========================================
+   style.css - 色系、字體與細節裝飾
+   ========================================== */
+
+/* 標題與文字色彩設定 (紅、棕柔和風格) */
+h1 {
+    font-size: 1.8rem;
+    color: #6b4423;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #8c3b28; /* 柔和磚紅 */
+    margin-bottom: 15px;
+    border-left: 4px solid #8c3b28;
+    padding-left: 10px;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #735d51;
+    margin: 15px 0 8px 0;
+}
+
+h4, p, li {
+    font-size: 1rem;
+    color: #5c473c;
+    margin-bottom: 10px;
+}
+
+/* 強調文字 */
+strong {
+    color: #8c3b28;
+}
+
+/* 列表樣式 */
+ul.source-list {
+    padding-left: 20px;
+}
+
+ul.source-list li {
+    margin-bottom: 8px;
+}
+
+ul.source-list a {
+    color: #8c3b28;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+ul.source-list a:hover {
+    text-decoration: underline;
+    color: #6b4423;
+}
