@@ -1,0 +1,198 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f7f5f0; /* 溫潤的大地色系背景 */
+    margin: 0;
+    padding: 20px;
+}
+
+/* 頂部頁首與頁尾最大寬度 */
+header, footer {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #5c4033; /* 咖啡色系頁首 */
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+header p, header small {
+    color: #e6dfd5;
+}
+
+/* 雙欄排版的外層容器 */
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 0 10px;
+}
+
+/* 左側側邊欄與黏性定位 */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.sidebar h2 {
+    color: #5c4033;
+    border-bottom: 2px solid #d4c5b9;
+    padding-bottom: 5px;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar nav a {
+    color: #5c4033;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar nav a:hover {
+    background-color: #f0eae1;
+    color: #b07d62;
+}
+
+/* 標記目前所在的分頁（作用中樣式） */
+.sidebar nav a.active {
+    background-color: #5c4033;
+    color: #ffffff;
+}
+
+/* 右側主內容區 */
+.content {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.content section, 
+.content aside {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #5c4033;
+    border-bottom: 2px solid #d4c5b9;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #704214;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+th, td {
+    border: 1px solid #d4c5b9;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e6dfd5;
+    color: #4a3525;
+}
+
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #666666;
+    margin-top: 8px;
+}
+
+aside {
+    background-color: #fdfcf7;
+    border-left: 4px solid #b07d62;
+    border-radius: 0 8px 8px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777777;
+    font-size: 0.9em;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+a {
+    color: #8c5830;
+}
+
+/* 影片 16:9 響應式容器 */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 響應式：平板與手機螢幕小於 768px 時改為上下堆疊 */
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+    }
+    .sidebar nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
