@@ -76,15 +76,3 @@ team.html 內容如下：
 美術：梁睿桐 工作：決定服裝、製作拍攝道具
 攝影：張庭瑄 工作：拍攝廣告影片
 劇務：與那嶺藍 工作：協助攝影拍攝、拍攝道具
----
-#架構
-
-my-project/
-├── index.html
-├── team.html
-├── css/
-│   ├── layout.css      （放置整體佈局、RWD、導覽列、側邊欄樣式）
-│   └── style.css       （放置色彩、box 排版、字型、細節樣式）
-└── images/
-    ├── luchuan.jpg     （請放置綠川水岸照片）
-    └── luk.jpg         （請放置綠空廊道照片）
